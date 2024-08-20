@@ -34,14 +34,14 @@
       </a>
     </li>
     @endcan
-    @can('player_index')
+    {{-- @can('player_index')
     <li class="nav-item">
       <a class="nav-link text-white " href="{{ route('admin.player.index')}}">
         <span class="sidenav-mini-icon"> <i class="fa-solid fa-user"></i> </span>
         <span class="sidenav-normal  ms-2  ps-1">Player List</span>
       </a>
     </li>
-    @endcan
+    @endcan --}}
 
      {{-- @can('admin_access')
     <li class="nav-item">
@@ -65,7 +65,7 @@
     <li class="nav-item">
       <a class="nav-link text-white " href="{{ url('admin/players-list')}}">
         <span class="sidenav-mini-icon"> <i class="fa-solid fa-user"></i> </span>
-        <span class="sidenav-normal  ms-2  ps-1">Player List</span>
+        <span class="sidenav-normal  ms-2  ps-1">All Player List</span>
       </a>
     </li>
     @endcan
