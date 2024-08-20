@@ -40,7 +40,25 @@
         </div>
       </div> --}}
       <ul class="navbar-nav  justify-content-end">
-      
+
+         <!-- Language Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Language
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+            <li>
+              <a class="dropdown-item" href="{{ url('admin/locale/en') }}">
+                <img src="{{ asset('assets/img/flags/GB.png') }}" alt="English" width="20" class="me-2"> English
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="{{ url('admin/locale/zh') }}">
+                <img src="{{ asset('assets/img/flags/china.png') }}" alt="中文" width="20" class="me-2"> 中文
+              </a>
+            </li>
+          </ul>
+          </li>
         <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
           <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
             <div class="sidenav-toggler-inner">
