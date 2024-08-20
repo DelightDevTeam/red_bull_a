@@ -1,6 +1,7 @@
 <?php 
 return [
  'localization' => 'Localization',
+ 'red_bull_slot' => 'Red Bull Slot',
  'admin_dashboard' => 'Admin Dashboard',
  'profile' => 'Profile',
  'win_lose_report' => 'Win/Lose Report',

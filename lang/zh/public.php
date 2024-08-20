@@ -1,6 +1,7 @@
 <?php 
 return [
     'localization' => '本地化',
+    'red_bull_slot' => '红牛老虎机',
     'admin_dashboard' => '管理仪表板',
     'agent_dashboard' => '代理仪表板',
     'profile' => '个人资料',
