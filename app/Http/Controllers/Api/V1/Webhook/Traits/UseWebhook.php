@@ -81,7 +81,8 @@ trait UseWebhook
                 ->where('product_id', $product->id)
                 ->first();
 
-            $rate = $game_type_product->rate;
+            //$rate = $game_type_product->rate;
+            $rate = 0;
             $user = Auth::user(); // Get the authenticated user
 
 
