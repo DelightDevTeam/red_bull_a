@@ -44,10 +44,10 @@ class HomeController extends Controller
         $totalWithdraw = $this->getTotalWithdraw();
         $todayDeposit = $this->getTodayDeposit();
         $todayWithdraw = $this->getTodayWithdraw();
-        $provider_balance = (new AppSetting)->provider_initial_balance + SeamlessTransaction::sum('transaction_amount');
+        //$provider_balance = (new AppSetting)->provider_initial_balance + SeamlessTransaction::sum('transaction_amount');
 
         return view('admin.dashboard', compact(
-            'provider_balance',
+           // 'provider_balance',
             'agent_count',
             'player_count',
             'user',
