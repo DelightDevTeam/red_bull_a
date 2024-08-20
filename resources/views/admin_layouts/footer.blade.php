@@ -7,7 +7,7 @@
                   document.write(new Date().getFullYear())
                 </script>,
                 by
-                <a href="https://luckym.pro/" target="_blank" class="font-weight-bold" target="_blank">Lucky M Slot</a>
+                <a href="https://luckym.pro/" target="_blank" class="font-weight-bold" target="_blank">RedBull Slot</a>
               </div>
             </div>
             {{-- <div class="col-lg-6">
