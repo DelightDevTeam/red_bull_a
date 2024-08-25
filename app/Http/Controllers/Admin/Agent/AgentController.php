@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\TransferLogRequest;
+use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -357,15 +358,14 @@ class AgentController extends Controller
     }
 
     private function generateReferralCode($length = 8) {
-        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        $charactersLength = strlen($characters);
-        $randomString = '';
+        $letters = Str::lower(Str::random(2));
 
-        for ($i = 0; $i < $length; $i++) {
-            $randomString .= $characters[rand(0, $charactersLength - 1)];
-        }
+        // Generate the last three random numbers
+        $numbers = mt_rand(100, 999);
 
-        return $randomString;
+        // Combine the letters and numbers
+        return $letters . $numbers;
+
     }
 
 
@@ -467,7 +467,7 @@ class AgentController extends Controller
 
 
 
-    
+
 
 }
 
@@ -493,8 +493,8 @@ WHERE
 GROUP BY
     agents.id, players.id;
 
-    // agent report comission query 
-    SELECT 
+    // agent report comission query
+    SELECT
     agent_id,
     MONTH(created_on) as month,
     YEAR(created_on) as year,
@@ -505,11 +505,11 @@ GROUP BY
     SUM(jack_pot_amount) as total_jack_pot_amount,
     SUM(jp_bet) as total_jp_bet,
     SUM(agent_commission) as total_agent_commission
-FROM 
+FROM
     reports
-GROUP BY 
-    agent_id, 
-    YEAR(created_on), 
+GROUP BY
+    agent_id,
+    YEAR(created_on),
     MONTH(created_on);
 
     //     $agentReports = DB::table('reports')
