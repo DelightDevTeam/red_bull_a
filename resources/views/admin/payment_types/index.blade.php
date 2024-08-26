@@ -22,12 +22,12 @@
       <div class="card-header pb-0">
         <div class="d-lg-flex">
           <div>
-            <h5 class="mb-0">Bank Account</h5>
+            <h5 class="mb-0">@lang('public.bank_account')</h5>
 
           </div>
           <div class="ms-auto my-auto mt-lg-0 mt-4">
             <div class="ms-auto my-auto">
-              <a href="{{ route('admin.paymentTypes.create') }}" class="btn bg-gradient-primary btn-sm mb-0">+&nbsp; New Bank</a>
+              <a href="{{ route('admin.paymentTypes.create') }}" class="btn bg-gradient-primary btn-sm mb-0">+&nbsp; @lang('public.new_bank')</a>
             </div>
           </div>
         </div>
@@ -37,10 +37,10 @@
           <thead class="thead-light">
             <tr>
               <th>#</th>
-              <th>Account Name</th>
-              <th>Account No</th>
-              <th>Payment Type</th>
-              <th>Actions</th>
+              <th>@lang('public.bank_account_name')</th>
+              <th>@lang('public.bank_account_number')</th>
+              <th>@lang('public.payment_type')</th>
+              <th>@lang('public.action')</th>
             </tr>
           </thead>
           <tbody>

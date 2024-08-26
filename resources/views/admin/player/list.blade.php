@@ -22,14 +22,14 @@
    <div class="card-header pb-0">
     <div class="d-lg-flex">
      <div>
-      <h5 class="mb-0">Player With Agent's  Dashboards</h5>
+      <h5 class="mb-0">@lang('public.player_with_agents_dashboards')</h5>
 
      </div>
      <div class="ms-auto my-auto mt-lg-0 mt-4">
       <div class="ms-auto my-auto">
        {{-- <a href="{{ route('admin.roles.create') }}" class="btn bg-gradient-primary btn-sm mb-0">+&nbsp; New Role</a> --}}
        <button class="btn btn-outline-primary btn-sm export mb-0 mt-sm-0 mt-1 py-1" data-type="csv" type="button"
-        name="button">Export</button>
+        name="button">@lang('public.export')</button>
       </div>
      </div>
     </div>
@@ -39,10 +39,10 @@
      <thead class="thead-light">
             <tr>
                 <th>ID</th>
-                <th>User Name</th>
-                <th>User Phone</th>
-                <th>Creator</th>
-                <th>Balance</th>
+                <th>@lang('public.name')</th>
+                <th>@lang('public.phone_number')</th>
+                <th>@lang('public.creator')</th>
+                <th>@lang('public.balance')</th>
             </tr>
         </thead>
         <tbody>

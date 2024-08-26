@@ -63,20 +63,20 @@
  <div class="col-12">
   <div class="container mt-2">
    <div class="d-flex justify-content-between">
-    <h4>Agent To Player Deposit Log Detail</h4>
+    <h4> @lang('public.agent_to_player_deposit_log_detail')l</h4>
    </div>
    <div class="card">
     <div class="table-responsive">
      <table class="table align-items-center mb-0">
       <thead>
             <tr>
-                <th class="text-center align-middle">Agent Name</th>
-                <th class="text-center align-middle">Player Name</th>
-                <th class="text-center align-middle">Total Deposits</th>
-                <th class="text-center align-middle">Total DepositAmount</th>
-                <th class="text-center align-middle">Commission Percentage %</th>
-                <th class="text-center align-middle">Commission Amount</th>
-                <th class="text-center align-middle">Detail</th>
+                <th class="text-center align-middle">@lang('public.agent_name')</th>
+                <th class="text-center align-middle">@lang('public.player_name')</th>
+                <th class="text-center align-middle">@lang('public.total_deposits')</th>
+                <th class="text-center align-middle">@lang('public.total_deposit_amount')</th>
+                <th class="text-center align-middle">@lang('public.commission_percentage')</th>
+                <th class="text-center align-middle">@lang('public.commission_amount')</th>
+                <th class="text-center align-middle">@lang('public.detail')</th>
             </tr>
         </thead>
         <tbody>
@@ -90,7 +90,7 @@
                     <td  class="text-center align-middle">{{ number_format(($transaction->total_amount / 100) * ($transaction->agent_commission / 100), 2) }}</td>
                     <td class="text-center align-middle">
                         <a href="{{ route('admin.agent.to.player.detail', ['agent_id' => $transaction->agent_id, 'player_id' => $transaction->player_id]) }}" class="btn btn-primary btn-sm">
-                            View Details
+                            @lang('public.view_details')
                         </a>
                     </td>
                 </tr>

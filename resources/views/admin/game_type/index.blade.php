@@ -7,7 +7,7 @@
             <div class="card-header pb-0">
                 <div class="d-lg-flex">
                     <div>
-                        <h5 class="mb-0">Game Type List
+                        <h5 class="mb-0 pb-2">@lang('public.game_type_list')
                         </h5>
                     </div>
                 </div>
@@ -17,10 +17,10 @@
                 <table class="table table-flush" id="users-search">
                     <thead>
                         <tr>
-                            <th class="bg-success text-white">Game Type</th>
-                            <th class="bg-danger text-white">Product</th>
-                            <th class="bg-warning text-white">Image</th>
-                            <th class="bg-info text-white">Actions</th>
+                            <th class="bg-success text-white">@lang('public.game_type')</th>
+                            <th class="bg-danger text-white">@lang('public.product')</th>
+                            <th class="bg-warning text-white">@lang('public.image')</th>
+                            <th class="bg-info text-white">@lang('public.action')</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -31,7 +31,7 @@
                             <td>{{ $product->name }}</td>
                             <td><img src="{{$product->getImgUrlAttribute()}}" alt="" width="100px"></td>
                             <td>
-                                <a href="{{route('admin.gametypes.edit',[$gameType->id,$product->id])}}" class="btn btn-info btn-sm">Edit</a>
+                                <a href="{{route('admin.gametypes.edit',[$gameType->id,$product->id])}}" class="btn btn-info btn-sm">@lang('public.edit')</a>
                             </td>
                         </tr>
                         @endforeach

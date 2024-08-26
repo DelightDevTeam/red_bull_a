@@ -21,13 +21,12 @@
       <div class="card-header pb-0">
         <div class="d-lg-flex">
           <div>
-            <h5 class="mb-0">Agent List Dashboards</h5>
-
+            <h5 class="mb-0">@lang('public.agent_lists-dashboards')</h5>
           </div>
           <div class="ms-auto my-auto mt-lg-0 mt-4">
             <div class="ms-auto my-auto">
-              <a href="{{ route('admin.agent.create') }}" class="btn bg-gradient-primary btn-sm mb-0">+&nbsp; Create
-                Agent</a>
+              <a href="{{ route('admin.agent.create') }}" class="btn bg-gradient-primary btn-sm mb-0">+&nbsp;  @lang('public.logs')
+                </a>
             </div>
           </div>
         </div>
@@ -36,14 +35,14 @@
         <table class="table table-flush" id="users-search">
           <thead class="thead-light">
             <th>#</th>
-            <th>AgentName</th>
-            <th>AgentID</th>
-            <th>ReferralCode</th>
-            <th>Phone</th>
-            <th>Status</th>
-            <th>Balance</th>
-            <th>Action</th>
-            <th>Transfer</th>
+            <th> @lang('public.agent_name')</th>
+            <th> @lang('public.agent_id')</th>
+            <th> @lang('public.referral_code')</th>
+            <th> @lang('public.phone_number')</th>
+            <th> @lang('public.status')</th>
+            <th> @lang('public.balance')</th>
+            <th> @lang('public.action')</th>
+            <th> @lang('public.transfer')</th>
           </thead>
           <tbody>
             {{-- kzt --}}
@@ -95,19 +94,19 @@
               </td>
               <td>
                 <a href="{{ route('admin.agent.getCashIn', $user->id) }}" data-bs-toggle="tooltip" data-bs-original-title="Deposit To Agent" class="btn btn-info btn-sm">
-                <i class="fas fa-plus text-white me-1"></i>Dep
+                <i class="fas fa-plus text-white me-1"></i> @lang('public.deposit')
                 </a>
                 <a href="{{ route('admin.agent.getCashOut', $user->id) }}" data-bs-toggle="tooltip" data-bs-original-title="WithDraw To Agent" class="btn btn-info btn-sm">
                 <i class="fas fa-minus text-white me-1"></i>
-                  WDL
+                @lang('public.withdraw')
                 </a>
                 <a href="{{ route('admin.logs', $user->id) }}" data-bs-toggle="tooltip" data-bs-original-title="Agent logs" class="btn btn-info btn-sm">
                   <i class="fas fa-right-left text-white me-1"></i>
-                  Logs
+                  @lang('public.logs')
                 </a>
                 <a href="{{ route('admin.transferLogDetail', $user->id) }}" data-bs-toggle="tooltip" data-bs-original-title="Reports" class="btn btn-info btn-sm">
                   <i class="fas fa-right-left text-white me-1"></i>
-                  transferLogs
+                  @lang('public.transfer_logs')
                 </a>
 
 
@@ -117,7 +116,7 @@
             @else
             <tr>
               <td col-span=8>
-                There was no Agents.
+                @lang('public.there_was_no_agents')
               </td>
             </tr>
             @endif

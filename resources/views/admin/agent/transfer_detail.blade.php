@@ -24,7 +24,7 @@
             <h5 class="mb-0">Transfer Detail </h5>
 
           </div>
-          
+
         </div>
       </div>
       <div class="table-responsive">
@@ -38,9 +38,9 @@
             <th>Profit</th>
             <th>CurrentCashBalance</th>
             <th>Date</th>
-        
+
           </thead>
-          
+
           <tbody>
             @foreach ($transfer_detail as $index => $log)
             <tr>

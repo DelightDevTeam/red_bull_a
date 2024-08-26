@@ -63,7 +63,7 @@
   <div class="col-12">
     <div class="container mb-3">
       <a class="btn btn-icon btn-2 btn-primary float-end me-5" href="{{ route('admin.paymentTypes.index') }}">
-        <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>Back</span>
+        <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>@lang('public.back')</span>
       </a>
     </div>
     <div class="container my-auto mt-5">
@@ -72,7 +72,7 @@
           <div class="card z-index-0 fadeIn3 fadeInBottom">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
               <div class="bg-gradient-primary shadow-primary border-radius-lg py-2 pe-1">
-                <h4 class="text-white font-weight-bolder text-center mb-2">Edit Payment</h4>
+                <h4 class="text-white font-weight-bolder text-center mb-2">@lang('public.edit_payment')</h4>
               </div>
             </div>
             <div class="card-body">
@@ -80,7 +80,7 @@
                 @csrf
                 @method('PUT')
                 <div class="custom-form-group">
-                  <label for="title">Payment Method</label>
+                  <label for="title">@lang('public.payment_method')</label>
                   <select name="payment_type_id">
                     <option disabled>Select Payment Method</option>
                     @foreach($paymentTypes as $payment)
@@ -89,15 +89,15 @@
                   </select>
                 </div>
                 <div class="custom-form-group">
-                  <label for="phone">Account Name</label>
+                  <label for="phone">@lang('public.payment_method')</label>
                   <input type="text" class="form-control" id="account_name" name="account_name" placeholder="Enter Account Name" value="{{ $userPayment->account_name }}">
                 </div>
                 <div class="custom-form-group">
-                  <label for="name">Account No</label>
+                  <label for="name">@lang('public.bank_account_number')</label>
                   <input type="number" class="form-control" id="account_no" name="account_no" placeholder="Enter Account No" value="{{ $userPayment->account_no }}">
                 </div>
                 <div class="custom-form-group">
-                  <button class="btn btn-primary" type="submit">Edit</button>
+                  <button class="btn btn-primary" type="submit">@lang('public.edit')</button>
                 </div>
               </form>
             </div>

@@ -24,10 +24,10 @@
             <div class="card-header pb-0">
                 <div class="d-lg-flex">
                     <div>
-                        <h5 class="mb-0">Game List Dashboards
+                        <h5 class="mb-0">@lang('public.game_list_dashboards')
                             <span>
                                 <p>
-                                    All Total Running Games on Site: {{ count($games) }}
+                                   @lang('public.all_total_running_games_on_site') {{ count($games) }}
                                 </p>
                             </span>
                         </h5>
@@ -46,13 +46,13 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th class="bg-success text-white">Game Type</th>
-                            <th class="bg-danger text-white">Product</th>
-                            <th class="bg-info text-white">Game Name</th>
-                            <th class="bg-warning text-white">Image</th>
-                            <th class="bg-success text-white">Status</th>
-                            <th class="bg-info text-white">Hot Status</th>
-                            <th class="bg-warning text-white">Actions</th>
+                            <th class="bg-success text-white">@lang('public.game_type')</th>
+                            <th class="bg-danger text-white">@lang('public.product')</th>
+                            <th class="bg-info text-white">@lang('public.game_name')e</th>
+                            <th class="bg-warning text-white">@lang('public.image')</th>
+                            <th class="bg-success text-white">@lang('public.status')</th>
+                            <th class="bg-info text-white">@lang('public.hot_status')</th>
+                            <th class="bg-warning text-white">@lang('public.action')</th>
                         </tr>
                     </thead>
                     <tbody>

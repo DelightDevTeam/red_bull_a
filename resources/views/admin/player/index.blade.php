@@ -21,7 +21,7 @@
       <div class="card-header pb-0">
         <div class="d-lg-flex">
           <div>
-            <h5 class="mb-0">Player Dashboards</h5>
+            <h5 class="mb-0">@lang('public.player_dashboards')</h5>
 
           </div>
           <div class="ms-auto my-auto mt-lg-0 mt-4">
@@ -35,13 +35,13 @@
         <table class="table table-flush" id="users-search">
           <thead class="thead-light">
             <th>#</th>
-            <th>PlayerID</th>
-            <th>Name</th>
-            <th>Phone</th>
-            <th>Status</th>
-            <th>Balance</th>
-            <th>Action</th>
-            <th>Transaction</th>
+            <th>@lang('public.player_id')</th>
+            <th>@lang('public.name')</th>
+            <th>@lang('public.phone_number')</th>
+            <th>@lang('public.status')</th>
+            <th>@lang('public.balance')</th>
+            <th>@lang('public.action')</th>
+            <th>@lang('public.transaction')</th>
           </thead>
           <tbody>
           {{-- kzt --}}
@@ -85,23 +85,23 @@
               <td>
                 <a href="{{ route('admin.player.getCashIn', $user->id) }}" data-bs-toggle="tooltip" data-bs-original-title="Deposit To Player" class="btn btn-info btn-sm">
                   <i class="fas fa-plus text-white me-1"></i>
-                  Dep
+                  @lang('public.deposit')
                 </a>
                 <a href="{{ route('admin.player.getCashOut', $user->id) }}" data-bs-toggle="tooltip" data-bs-original-title="WithDraw To Player" class="btn btn-info btn-sm">
                 <i class="fas fa-minus text-white me-1"></i>
-                  WDL
+                @lang('public.withdraw')
                 </a>
                 <a href="{{ route('admin.report.view', $user->user_name) }}" data-bs-toggle="tooltip" data-bs-original-title="Reports" class="btn btn-info btn-sm">
                   <i class="fas fa-line-chart text-white me-1"></i>
-                  Reports
+                  @lang('public.reports')
                 </a>
                 <a href="{{ route('admin.logs', $user->id) }}" data-bs-toggle="tooltip" data-bs-original-title="Reports" class="btn btn-info btn-sm">
                   <i class="fas fa-right-left text-white me-1"></i>
-                  Logs
+                  @lang('public.logs')
                 </a>
                 <a href="{{ route('admin.transferLogDetail', $user->id) }}" data-bs-toggle="tooltip" data-bs-original-title="Reports" class="btn btn-info btn-sm">
                   <i class="fas fa-right-left text-white me-1"></i>
-                  transferLogs
+                 @lang('public.transfer_logs')
                 </a>
           </td>
             </tr>
@@ -109,7 +109,7 @@
             @else
             <tr>
                 <td col-span=8>
-                    There was no Players.
+                    @lang('public.there_was_no_players')
                 </td>
             </tr>
             @endif

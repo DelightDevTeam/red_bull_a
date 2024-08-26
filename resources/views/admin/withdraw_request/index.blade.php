@@ -21,7 +21,7 @@
                 <div class="card-header pb-0">
                     <div class="d-lg-flex">
                         <div>
-                            <h5 class="mb-0">Withdraw Requested Lists</h5>
+                            <h5 class="mb-0">@lang('public.withdraw_requested_lists')</h5>
 
                         </div>
                     </div>
@@ -30,14 +30,14 @@
                     <table class="table table-flush" id="users-search">
                         <thead class="thead-light">
                         <th>#</th>
-                        <th>PlayerName</th>
-                        <th>Requested Amount</th>
-                        <th>Payment Method</th>
-                        <th>Bank Account Name</th>
-                        <th>Bank Account Number</th>
-                        <th>Status</th>
-                        <th>Created_at</th>
-                        <th>Action</th>
+                        <th>@lang('public.player_name')</th>
+                        <th>@lang('public.requested_amount')</th>
+                        <th>@lang('public.payment_method')</th>
+                        <th>@lang('public.bank_account_name')</th>
+                        <th>@lang('public.bank_account_number')</th>
+                        <th>@lang('public.status')</th>
+                        <th>@lang('public.created_at')</th>
+                        <th>@lang('public.action')</th>
                         </thead>
                         <tbody>
                         @foreach ($withdraws as $withdraw)

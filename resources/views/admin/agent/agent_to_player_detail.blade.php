@@ -65,7 +65,7 @@
    <div class="d-flex justify-content-between">
     {{-- <h4>Agent To Player Deposit Log Detail</h4> --}}
     <a class="btn btn-icon btn-2 btn-primary" href="{{ route('admin.agent.AgentToPlayerDepLog') }}">
-     <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>Back</span>
+     <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>@lang('public.back')</span>
     </a>
    </div>
    <div class="card">
@@ -76,10 +76,10 @@
      <table class="table align-items-center mb-0">
        <thead>
             <tr >
-                <th class="text-center align-middle">Transaction Amount</th>
-                <th class="text-center align-middle">Transaction Date</th>
-                <th class="text-center align-middle">Commission Percentage %</th>
-                <th class="text-center align-middle">Commission Earned</th>
+                <th class="text-center align-middle">@lang('public.transaction_amount')</th>
+                <th class="text-center align-middle">@lang('public.transaction_date')</th>
+                <th class="text-center align-middle">@lang('public.commission_percentage')</th>
+                <th class="text-center align-middle">@lang('public.commission_earned')</th>
             </tr>
         </thead>
         <tbody>

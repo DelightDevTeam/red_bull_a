@@ -63,9 +63,9 @@
   <div class="col-12">
     <div class="container-fluid mt-0 p-3 bg-dark">
       <div class="d-flex justify-content-between">
-        <h4 class="text-white">Promotion's Detail</h4>
+        <h4 class="text-white">@lang('public.promotion_detail')</h4>
         <a class="btn btn-icon btn-2 btn-primary" href="{{ route('admin.promotions.index') }}">
-          <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>Back</span>
+          <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>@lang('public.back')</span>
         </a>
       </div>
       <div class="card bg-dark text-white">
@@ -77,29 +77,29 @@
                 <td>{!! $promotion->id !!}</td>
               </tr>
               <tr>
-                <td class="text-right">Promotion Image</td>
+                <td class="text-right">@lang('public.promotion_image')</td>
                 <td>
                   <img src="{{ $promotion->img_url }}" class="w-25 img-thumbnail" alt="">
                 </td>
               </tr>
               <tr>
-                <td class="text-right">Title</td>
+                <td class="text-right">@lang('public.title')</td>
                 <td>
                   {{ $promotion->title }}
                 </td>
               </tr>
               <tr>
-                <td class="text-right">Description</td>
+                <td class="text-right">@lang('public.description')</td>
                 <td>
                   {!! $promotion->description !!}
                 </td>
               </tr>
               <tr>
-                <td>Create Date</td>
+                <td>@lang('public.created_at')</td>
                 <td>{!! $promotion->created_at->format('F j, Y') !!}</td>
               </tr>
               <tr>
-                <td>Update Date</td>
+                <td>@lang('public.updated_at')</td>
                 <td>{!! $promotion->updated_at->format('F j, Y') !!}</td>
               </tr>
             </tbody>

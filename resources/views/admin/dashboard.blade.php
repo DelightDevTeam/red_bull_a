@@ -10,13 +10,13 @@
                         <i class="fas fa-dollar-sign"></i>
                     </div>
                     <div class="text-end pt-1">
-                        <p class="text-sm mb-0 text-capitalize">Balance</p>
+                        <p class="text-sm mb-0 text-capitalize">@lang('public.balance')</p>
                         <h4 class="mb-0">{{ number_format(auth()->user()->balanceFloat) }}</h4>
                     </div>
                 </div>
                 <hr class="dark horizontal my-0">
                 <div class="card-footer p-3">
-                    <p class="mb-0"><span class="text-success text-sm font-weight-bolder"></span>latest update</p>
+                    <p class="mb-0"><span class="text-success text-sm font-weight-bolder"></span>@lang('public.latest_update')</p>
                 </div>
             </div>
             <br>
@@ -29,13 +29,13 @@
                         <i class="fas fa-coins"></i>
                     </div>
                     <div class="text-end pt-1">
-                        <p class="text-sm mb-0 text-capitalize">Deposit</p>
+                        <p class="text-sm mb-0 text-capitalize">@lang('public.deposit')</p>
                         <h4 class="mb-0">{{ number_format($totalDeposit->amount/ 100, 2) }}</h4>
                     </div>
                 </div>
                 <hr class="dark horizontal my-0">
                 <div class="card-footer p-3">
-                    <p class="mb-0"><span class="text-success text-sm font-weight-bolder"></span>latest update</p>
+                    <p class="mb-0"><span class="text-success text-sm font-weight-bolder"></span>@lang('public.latest_update')</p>
                 </div>
             </div>
         </div>
@@ -47,13 +47,13 @@
                         <i class="fas fa-coins"></i>
                     </div>
                     <div class="text-end pt-1">
-                        <p class="text-sm mb-0 text-capitalize ">WithDraw</p>
+                        <p class="text-sm mb-0 text-capitalize ">@lang('public.withdraw')</p>
                         <h4 class="mb-0 ">{{ number_format(abs($totalWithdraw->amount)/ 100, 2) }}</h4>
                     </div>
                 </div>
                 <hr class="horizontal my-0 dark">
                 <div class="card-footer p-3">
-                    <p class="mb-0 "><span class="text-success text-sm font-weight-bolder"></span>latest update</p>
+                    <p class="mb-0 "><span class="text-success text-sm font-weight-bolder"></span>@lang('public.latest_update')</p>
                 </div>
             </div>
         </div>
@@ -65,13 +65,13 @@
                         <i class="fas fa-coins"></i>
                     </div>
                     <div class="text-end pt-1">
-                        <p class="text-sm mb-0 text-capitalize ">TodayDeposit</p>
+                        <p class="text-sm mb-0 text-capitalize ">@lang('public.today_deposit')</p>
                         <h4 class="mb-0 ">{{ number_format(abs($todayDeposit->amount)/ 100, 2) }}</h4>
                     </div>
                 </div>
                 <hr class="horizontal my-0 dark">
                 <div class="card-footer p-3">
-                    <p class="mb-0 "><span class="text-success text-sm font-weight-bolder"></span>latest update</p>
+                    <p class="mb-0 "><span class="text-success text-sm font-weight-bolder"></span>@lang('public.latest_update')</p>
                 </div>
             </div>
         </div>
@@ -83,13 +83,13 @@
                         <i class="fas fa-coins"></i>
                     </div>
                     <div class="text-end pt-1">
-                        <p class="text-sm mb-0 text-capitalize ">TodayWithdraw</p>
+                        <p class="text-sm mb-0 text-capitalize ">@lang('public.today_withdraw')</p>
                         <h4 class="mb-0 ">{{ number_format(abs($todayWithdraw->amount)/ 100, 2) }}</h4>
                     </div>
                 </div>
                 <hr class="horizontal my-0 dark">
                 <div class="card-footer p-3">
-                    <p class="mb-0 "><span class="text-success text-sm font-weight-bolder"></span>latest update</p>
+                    <p class="mb-0 "><span class="text-success text-sm font-weight-bolder"></span>@lang('public.latest_update')</p>
                 </div>
             </div>
         </div>
@@ -104,13 +104,13 @@
                     </a>
                     </div>
                     <div class="text-end pt-1">
-                        <p class="text-sm mb-0 text-capitalize ">Agents</p>
+                        <p class="text-sm mb-0 text-capitalize ">@lang('public.agents')</p>
                         <h4 class="mb-0 ">{{$agent_count}}</h4>
                     </div>
                 </div>
                 <hr class="horizontal my-0 dark">
                 <div class="card-footer p-3">
-                    <p class="mb-0 ">Just updated</p>
+                    <p class="mb-0 ">@lang('public.just_updated')</p>
                 </div>
             </div>
         </div>
@@ -125,13 +125,13 @@
                     </a>
                     </div>
                     <div class="text-end pt-1">
-                        <p class="text-sm mb-0 text-capitalize ">Players</p>
+                        <p class="text-sm mb-0 text-capitalize ">@lang('public.players')</p>
                         <h4 class="mb-0 ">{{$player_count}}</h4>
                     </div>
                 </div>
                 <hr class="horizontal my-0 dark">
                 <div class="card-footer p-3">
-                    <p class="mb-0 ">Just updated</p>
+                    <p class="mb-0 ">@lang('public.just_updated')</p>
                 </div>
             </div>
         </div>
@@ -145,18 +145,18 @@
                 <form action="{{ route('admin.balanceUp') }}" method="post">
                     @csrf
                     <div class="card-header p-3 pb-0">
-                        <h6 class="mb-1">Update Balance</h6>
+                        <h6 class="mb-1">@lang('public.update_balance')</h6>
                         <p class="text-sm mb-0">
-                            Owner can update balance.
+                            @lang('public.owner_can_update_balance')
                         </p>
                     </div>
                     <div class="card-body p-3">
                         <div class="input-group input-group-static my-4">
-                            <label>Amount</label>
+                            <label>@lang('public.amount')</label>
                             <input type="integer" class="form-control" name="balance">
                         </div>
 
-                        <button class="btn bg-gradient-dark mb-0 float-end">Update </button>
+                        <button class="btn bg-gradient-dark mb-0 float-end">@lang('public.update') </button>
                     </div>
                 </form>
             </div>

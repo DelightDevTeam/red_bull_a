@@ -90,13 +90,13 @@
         <div class="card-header pb-0">
           <div class="d-lg-flex">
             <div>
-              <h5 class="mb-0">Create New Agent</h5>
+              <h5 class="mb-0">@lang('public.create_new_agent')</h5>
 
             </div>
             <div class="ms-auto my-auto mt-lg-0 mt-4">
               <div class="ms-auto my-auto">
                 <a class="btn btn-icon btn-2 btn-primary" href="{{ route('admin.agent.index') }}">
-                  <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>Back</span>
+                  <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>@lang('public.back')</span>
                 </a>
               </div>
             </div>
@@ -106,35 +106,35 @@
           <form role="form" method="POST" class="text-start" action="{{ route('admin.agent.store') }}" enctype="multipart/form-data">
             @csrf
             <div class="custom-form-group">
-              <label for="title">Agent ID <span class="text-danger">*</span></label>
+              <label for="title">@lang('public.agent_id')<span class="text-danger">*</span></label>
               <input type="text"  name="user_name" class="form-control" value="{{$agent_name}}" readonly>
               @error('user_name')
               <span class="text-danger d-block">*{{ $message }}</span>
               @enderror
             </div>
             <div class="custom-form-group">
-              <label for="title">Referal Code <span class="text-danger">*</span></label>
+              <label for="title">@lang('public.referal_code')<span class="text-danger">*</span></label>
               <input type="text"  name="referral_code" class="form-control" value="{{$referral_code}}">
               @error('referral_code')
               <span class="text-danger d-block">*{{ $message }}</span>
               @enderror
             </div>
             <div class="custom-form-group">
-              <label for="title">Agent Name <span class="text-danger">*</span></label>
+              <label for="title">@lang('public.agent_name')<span class="text-danger">*</span></label>
               <input type="text"  name="name" class="form-control" value="{{old('name')}}" placeholder="Enter Agent Name">
               @error('name')
               <span class="text-danger d-block">*{{ $message }}</span>
               @enderror
             </div>
             <div class="custom-form-group">
-              <label for="title">Password <span class="text-danger">*</span></label>
+              <label for="title">@lang('public.password')<span class="text-danger">*</span></label>
               <input type="text"  name="password" class="form-control" value="{{old('password')}}" placeholder="Enter Password">
               @error('password')
               <span class="text-danger d-block">*{{ $message }}</span>
               @enderror
             </div>
             <div class="custom-form-group">
-              <label for="title">Phone No</label>
+              <label for="title">@lang('public.phone_number')</label>
               <input type="text"  name="phone" class="form-control" value="{{old('phone')}}" placeholder="Enter Phone Number">
               @error('phone')
               <span class="text-danger d-block">*{{ $message }}</span>
@@ -148,7 +148,7 @@
                   @enderror
               </div>
             <div class="custom-form-group">
-                <label for="title">Payment Type <span class="text-danger">*</span></label>
+                <label for="title">@lang('public.payment_type')<span class="text-danger">*</span></label>
                 <select name="payment_type_id" id="">
                     <option value="">Select Payment Type</option>
                     @foreach($paymentTypes as $paymentType)
@@ -160,45 +160,45 @@
                 @enderror
             </div>
             <div class="custom-form-group">
-                <label for="title">Account Name <span class="text-danger">*</span></label>
+                <label for="title">@lang('public.account_name')<span class="text-danger">*</span></label>
                 <input type="text"  name="account_name" class="form-control" value="{{old('account_name')}}" placeholder="Enter Bank Account Name">
                 @error('account_name')
                  <span class="text-danger d-block">*{{ $message }}</span>
                 @enderror
             </div>
             <div class="custom-form-group">
-                <label for="title">Account Number <span class="text-danger">*</span></label>
+                <label for="title">@lang('public.account_number') <span class="text-danger">*</span></label>
                 <input type="text"  name="account_number" class="form-control" value="{{old('account_number')}}" placeholder="Enter Bank Account Number">
                 @error('account_number')
                 <span class="text-danger d-block">*{{ $message }}</span>
                 @enderror
             </div>
              <div class="custom-form-group">
-              <label for="title">Agent Site Logo Image</label>
+              <label for="title">@lang('public.agent_site_logo_image')</label>
               <input type="file" class="form-control" id="" name="agent_logo">
              </div>
             <div class="custom-form-group">
-              <label>Max Balance : </label>
+              <label>@lang('public.max_balance') </label>
               <span class="badge badge-sm bg-gradient-success">{{auth()->user()->balanceFloat}}</span>
             </div>
             <div class="custom-form-group">
-              <label for="title">Amount</label>
+              <label for="title">@lang('public.amount')</label>
               <input type="text"  name="amount" class="form-control" value="{{old('amount')}}" placeholder="0.00">
               @error('amount')
               <span class="text-danger d-block">*{{ $message }}</span>
               @enderror
             </div>
             <div class="custom-form-group">
-              <label for="title">Commission</label>
+              <label for="title">@lang('public.commission')</label>
               <input type="number"  name="commission" class="form-control" value="{{old('commission')}}" >
               @error('commission')
               <span class="text-danger d-block">*{{ $message }}</span>
               @enderror
             </div>
             <div class="custom-form-group">
-              <button class="btn btn-info" type="button" id="resetFormButton">Cancel</button>
+              <button class="btn btn-info" type="button" id="resetFormButton">@lang('public.cancel')</button>
 
-              <button type="submit" class="btn btn-primary" type="button">Submit</button>
+              <button type="submit" class="btn btn-primary" type="button">@lang('public.submit')</button>
             </div>
           </form>
         </div>

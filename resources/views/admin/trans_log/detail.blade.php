@@ -16,18 +16,23 @@
 @section('content')
 <div class="row mt-4">
  <div class="col-12">
+    <div class="d-flex justify-content-between">
+        <a class="btn btn-icon btn-2 btn-primary" href="{{ route('admin.agent.index') }}">
+         <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>@lang('public.back')</span>
+        </a>
+    </div>
   <div class="card">
    <!-- Card header -->
    <div class="card-header pb-0">
     <div class="d-lg-flex">
      <div>
-      <h5 class="mb-0">Transfer Log Detail</h5>
+      <h5 class="mb-0">@lang('public.transfer_log_detail')</h5>
 
      </div>
      <div class="ms-auto my-auto mt-lg-0 mt-4">
       <div class="ms-auto my-auto">
        <button class="btn btn-outline-primary btn-sm export mb-0 mt-sm-0 mt-1 " data-type="csv" type="button"
-        name="button">Export</button>
+        name="button">@lang('public.export')</button>
       </div>
      </div>
     </div>
@@ -37,10 +42,10 @@
      <thead class="thead-light">
 
         <tr>
-            <th>Date</th>
-            <th>To User</th>
-            <th>Amount</th>
-            <th>Type</th>
+            <th>@lang('public.date')</th>
+            <th>@lang('public.to_user')</th>
+            <th>@lang('public.amount')</th>
+            <th>@lang('public.type')</th>
         </tr>
     </thead>
         {{-- <tbody>
@@ -75,7 +80,7 @@
                 @elseif($log->type == 'withdraw')
                 <p class="text-success font-weight-bold"> -{{ abs($log->amountFloat) }}</p>
                 @else
-                <p>No data Fount</p>
+                <p>No data Found</p>
                 @endif
             </td>
             <td>

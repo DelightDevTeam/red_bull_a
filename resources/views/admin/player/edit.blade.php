@@ -66,13 +66,13 @@
     <div class="card-header pb-0">
      <div class="d-lg-flex">
       <div>
-       <h5 class="mb-0">Edit User</h5>
+       <h5 class="mb-0">@lang('public.edit_user')</h5>
 
       </div>
       <div class="ms-auto my-auto mt-lg-0 mt-4">
        <div class="ms-auto my-auto">
         <a class="btn btn-icon btn-2 btn-primary" href="{{ route('admin.player.index') }}">
-         <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>Back</span>
+         <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>@lang('public.back')</span>
         </a>
 
        </div>
@@ -85,28 +85,28 @@
       @csrf
       @method('PUT')
       <div class="custom-form-group">
-              <label for="title">PlayerId <span class="text-danger">*</span></label>
+              <label for="title">@lang('public.player_id') <span class="text-danger">*</span></label>
               <input type="text"  name="user_name" class="form-control" value="{{$player->name}}" readonly>
               @error('user_name')
               <span class="text-danger d-block">*{{ $message }}</span>
               @enderror
             </div>
             <div class="custom-form-group">
-              <label for="title">Name <span class="text-danger">*</span></label>
+              <label for="title">@lang('public.name') <span class="text-danger">*</span></label>
               <input type="text"  name="name" class="form-control" value="{{$player->name}}">
               @error('name')
               <span class="text-danger d-block">*{{ $message }}</span>
               @enderror
             </div>
          <div class="custom-form-group">
-             <label for="title">Phone No</label>
+             <label for="title">@lang('public.phone_number')</label>
              <input type="text"  name="phone" class="form-control" value="{{$player->phone}}">
              @error('phone')
              <span class="text-danger d-block">*{{ $message }}</span>
              @enderror
          </div>
          <div class="custom-form-group">
-             <label for="title">Payment Type<span class="text-danger">*</span></label>
+             <label for="title">@lang('public.payment_type')<span class="text-danger">*</span></label>
              <select name="payment_type_id" id="">
                  @foreach($paymentTypes as $paymentType)
                      <option value="{{$paymentType->id}}" {{$paymentType->id == $player->payment_type_id ? 'selected': ''}}>{{$paymentType->name}}</option>
@@ -117,21 +117,21 @@
              @enderror
          </div>
          <div class="custom-form-group">
-             <label for="title">Account Name</label>
+             <label for="title">@lang('public.bank_account_name')</label>
              <input type="text"  name="account_name" class="form-control" value="{{$player->account_name}}">
              @error('account_name')
              <span class="text-danger d-block">*{{ $message }}</span>
              @enderror
          </div>
          <div class="custom-form-group">
-             <label for="title">Account Number</label>
+             <label for="title">@lang('public.bank_account_number')</label>
              <input type="text"  name="account_number" class="form-control" value="{{$player->account_number}}">
              @error('account_number')
              <span class="text-danger d-block">*{{ $message }}</span>
              @enderror
          </div>
       <div class="custom-form-group">
-       <button class="btn btn-primary" type="submit">Update</button>
+       <button class="btn btn-primary" type="submit">@lang('public.update')</button>
       </div>
      </form>
     </div>

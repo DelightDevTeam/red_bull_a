@@ -64,11 +64,11 @@
   <div class=" mt-2">
    <div class="d-flex justify-content-between">
     <a class="btn btn-icon btn-2 btn-primary" href="{{ route('admin.agent.index') }}">
-     <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>Back</span>
+     <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i> @lang('public.back')</span>
     </a>
    </div>
    <div class="card">
-   <h4 class="ms-3">Agent Information </h4>
+   <h4 class="ms-3 pt-1">@lang('public.agent_information') </h4>
     <div class="table-responsive">
      <table class="table align-items-center mb-0">
       <tbody>
@@ -77,11 +77,11 @@
         <td>{!! $agent->id !!}</td>
        </tr>
        <tr>
-        <th>Agent Name</th>
+        <th>@lang('public.agent_name')</th>
         <td>{!! $agent->name !!}</td>
        </tr>
        <tr>
-        <th>Phone</th>
+        <th>@lang('public.phone_number')</th>
         <td>{!! $agent->phone !!}</td>
        </tr>
        <tr></tr>
@@ -101,7 +101,7 @@
     <div class="card-header pb-0">
      <div class="d-lg-flex">
       <div>
-       <h5 class="mb-0">Deposit</h5>
+       <h5 class="mb-0">@lang('public.phone_number')</h5>
       </div>
       <div class="ms-auto my-auto mt-lg-0 mt-4">
        <div class="ms-auto my-auto">
@@ -117,7 +117,7 @@
   <div class="row">
     <div class="col-md-6">
       <div class="input-group input-group-outline is-valid my-3">
-        <label class="form-label">Name</label>
+        <label class="form-label">@lang('public.name')</label>
         <input type="text" class="form-control" name="name" value="{{ $agent->name }}" readonly>
 
       </div>
@@ -127,7 +127,7 @@
     </div>
     <div class="col-md-6">
       <div class="input-group input-group-outline is-valid my-3">
-        <label class="form-label">Current Balance</label>
+        <label class="form-label">@lang('public.current_balance')</label>
         <input type="text" class="form-control" name="blance" value="{{ $agent->balanceFloat}}" readonly>
 
       </div>
@@ -140,7 +140,7 @@
   <div class="row">
     <div class="col-md-6">
       <div class="input-group input-group-outline is-valid my-3">
-        <label class="form-label">Amount</label>
+        <label class="form-label">@lang('public.amount')</label>
         <input type="text" class="form-control" name="amount" required>
       </div>
       @error('amount')
@@ -149,7 +149,7 @@
     </div>
     <div class="col-md-6">
       <div class="input-group input-group-outline is-valid my-3">
-        <label class="form-label">Addition Note (optional)</label>
+        <label class="form-label">@lang('public.addition_note')</label>
         <input type="text" class="form-control" name="note">
 
       </div>
@@ -162,7 +162,7 @@
   <div class="row">
     <div class="col-md-12">
       <div class="input-group input-group-outline is-valid my-3">
-        <button type="submit" class="btn btn-primary">Confirm</button>
+        <button type="submit" class="btn btn-primary">@lang('public.confirm')</button>
       </div>
     </div>
   </div>

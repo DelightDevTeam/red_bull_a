@@ -63,7 +63,7 @@
   <div class="col-12">
     <div class="container mb-3">
       <a class="btn btn-icon btn-2 btn-primary float-end me-5" href="{{ route('admin.text.index') }}">
-        <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>Back</span>
+        <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>@lang('public.back')</span>
       </a>
     </div>
     <div class="container my-auto mt-5">
@@ -72,21 +72,21 @@
           <div class="card">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
               <div class="bg-gradient-primary shadow-primary border-radius-lg py-2 pe-1">
-                <h4 class="text-white font-weight-bolder text-center mb-2">New Text Create</h4>
+                <h4 class="text-white font-weight-bolder text-center mb-2">@lang('public.new_text_create')</h4>
               </div>
             </div>
             <div class="card-body">
               <form role="form" class="text-start" action="{{ route('admin.text.store') }}" method="post">
                 @csrf
                 <div class="mb-3">
-                    <label class="form-label text-dark fw-bold" for="inputEmail1">Banner Text</label>
+                    <label class="form-label text-dark fw-bold" for="inputEmail1">@lang('public.banner_text')</label>
                     <input type="text" class="form-control border border-1 border-secondary px-2" id="inputEmail1" name="text" placeholder="Enter Text">
                     @error('text')
                     <span class="text-danger d-block">*{{ $message }}</span>
                     @enderror
                 </div>
                 <div class="">
-                  <button class="btn btn-primary" type="submit">Create</button>
+                  <button class="btn btn-primary" type="submit">@lang('public.create')</button>
                 </div>
               </form>
             </div>

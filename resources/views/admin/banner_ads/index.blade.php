@@ -22,12 +22,12 @@
       <div class="card-header pb-0">
         <div class="d-lg-flex">
           <div>
-            <h5 class="mb-0">Banners Dashboards</h5>
+            <h5 class="mb-0">@lang('public.banners_dashboards')</h5>
 
           </div>
           <div class="ms-auto my-auto mt-lg-0 mt-4">
             <div class="ms-auto my-auto">
-              <a href="{{ route('admin.adsbanners.create') }}" class="btn bg-gradient-primary btn-sm mb-0">+&nbsp; Ads New Banner</a>
+              <a href="{{ route('admin.adsbanners.create') }}" class="btn bg-gradient-primary btn-sm mb-0">+&nbsp; @lang('public.ads_new_banner')</a>
             </div>
           </div>
         </div>
@@ -37,10 +37,10 @@
           <thead class="thead-light">
             <tr>
               <th>#</th>
-              <th>Ads Image</th>
-              <th>Created At</th>
-              <th>Updated At</th>
-              <th>Action</th>
+              <th>@lang('public.ads_image')</th>
+              <th>@lang('public.created_at')</th>
+              <th>@lang('public.updated_at')</th>
+              <th>@lang('public.action')</th>
             </tr>
           </thead>
           <tbody>
@@ -61,7 +61,7 @@
                   @csrf
                   @method('DELETE')
                   <button type="submit" class="transparent-btn" data-bs-toggle="tooltip" data-bs-original-title="Delete Banner">
-                    <i class="material-icons text-secondary position-relative text-lg">delete</i>
+                    <i class="material-icons text-secondary position-relative text-lg text-danger">delete</i>
                   </button>
                 </form>
               </td>

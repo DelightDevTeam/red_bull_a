@@ -63,9 +63,9 @@
   <div class="col-10">
     <div class="container mt-0">
       <div class="d-flex justify-content-between">
-        <h4>Banner's Detail</h4>
+        <h4>@lang("public.banner's_detail")</h4>
         <a class="btn btn-icon btn-2 btn-primary" href="{{ route('admin.adsbanners.index') }}">
-          <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>Back</span>
+          <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>@lang('public.back')</span>
         </a>
       </div>
       <div class="card">
@@ -77,19 +77,20 @@
                             <td>{!! $adsbanner->id !!}</td>
                         </tr>
                         <tr>
-                            <th>Image</th>
+                            <th>@lang('public.image')</th>
                             <td>
                                 @if ($adsbanner->img_url)
                                     <img src="{{ $adsbanner->img_url }}" width="150px" class="img-thumbnail" alt="">
                                 @else
-                                    No Image
+                                @lang('public.no_image')
                                 @endif
                             </td>
                         </tr>
                         <tr>
-                            <th>Create Date</th>
+                            <th>@lang('public.created_at')</th>
                             <td>{!! $adsbanner->created_at ? $adsbanner->created_at->format('F j, Y') : 'N/A' !!}</td>
                         </tr>
+                        <tr></tr>
             </tbody>
           </table>
         </div>

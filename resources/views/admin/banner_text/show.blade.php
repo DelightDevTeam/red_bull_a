@@ -63,9 +63,9 @@
   <div class="col-10">
     <div class="container mt-0">
       <div class="d-flex justify-content-between">
-        <h4>Banner Text's Detail</h4>
+        <h4>@lang("public.banner_text's_detail")</h4>
         <a class="btn btn-icon btn-2 btn-primary" href="{{ route('admin.text.index') }}">
-          <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>Back</span>
+          <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>@lang('public.back')</span>
         </a>
       </div>
       <div class="card p-4">
@@ -77,12 +77,12 @@
                 <td>{!! $text->id !!}</td>
               </tr>
               <tr>
-                <td class="text-right">Banner Text</td>
+                <td class="text-right">@lang('public.banner_text')</td>
                 <td>
                   {{ $text->text }}
                 </td>
               <tr>
-                <td>Created Date</td>
+                <td>@lang('public.created_at')</td>
                 <td>{!! $text->created_at->format('F j, Y') !!}</td>
               </tr>
             </tbody>

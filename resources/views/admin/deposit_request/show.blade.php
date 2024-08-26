@@ -73,7 +73,7 @@
 
             <div class="col-md-6">
               <div class="input-group input-group-outline is-valid my-3">
-                <label class="form-label">User Name</label>
+                <label class="form-label">@lang('public.name')</label>
                 <input type="text" class="form-control" name="name" value="{{ $deposit->user->name }}" readonly>
 
               </div>
@@ -83,7 +83,7 @@
             </div>
             <div class="col-md-6">
               <div class="input-group input-group-outline is-valid my-3">
-                <label class="form-label">Phone</label>
+                <label class="form-label">@lang('public.phone_number')</label>
                 <input type="text" class="form-control" name="phone" value="{{ $deposit->user->phone }}" readonly>
 
               </div>
@@ -91,7 +91,7 @@
 
             <div class="col-md-6">
               <div class="input-group input-group-outline is-valid my-3">
-                <label class="form-label">Bank Account Name</label>
+                <label class="form-label">@lang('public.bank_account_name')</label>
                 <input type="text" class="form-control" name="account_name" value="{{ $deposit->userPayment->account_name }}" readonly>
 
               </div>
@@ -99,21 +99,21 @@
 
             <div class="col-md-6">
               <div class="input-group input-group-outline is-valid my-3">
-                <label class="form-label">Bank Account No</label>
+                <label class="form-label">@lang('public.bank_account_number')</label>
                 <input type="text" class="form-control" name="account_no" value="{{ $deposit->userPayment->account_no }}" readonly>
               </div>
             </div>
 
             <div class="col-md-6">
               <div class="input-group input-group-outline is-valid my-3">
-                <label class="form-label">Payment Method</label>
+                <label class="form-label">@lang('public.payment_method')</label>
                 <input type="text" class="form-control" name="" value="{{ $deposit->userPayment->paymentType->name }}" readonly>
               </div>
             </div>
 
             <div class="col-md-6">
               <div class="input-group input-group-outline is-valid my-3">
-                <label class="form-label">Amount</label>
+                <label class="form-label">@lang('public.amount')</label>
                 <input type="text" class="form-control" name="amount" value="{{ $deposit->amount }}" readonly>
               </div>
             </div>

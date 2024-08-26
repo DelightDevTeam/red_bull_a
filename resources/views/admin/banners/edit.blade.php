@@ -63,7 +63,7 @@
   <div class="col-12">
     <div class="container mb-3">
       <a class="btn btn-icon btn-2 btn-primary float-end me-5" href="{{ route('admin.banners.index') }}">
-        <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>Back</span>
+        <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>@lang('public.back')</span>
       </a>
     </div>
     <div class="container my-auto mt-5">
@@ -72,7 +72,7 @@
           <div class="card z-index-0 fadeIn3 fadeInBottom">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
               <div class="bg-gradient-primary shadow-primary border-radius-lg py-2 pe-1">
-                <h4 class="text-white font-weight-bolder text-center mb-2">New Banner Create</h4>
+                <h4 class="text-white font-weight-bolder text-center mb-2">@lang('public.new_banner_create')</h4>
               </div>
             </div>
             <div class="card-body">
@@ -80,12 +80,12 @@
                 @csrf
                 @method('PUT')
                 <div class="custom-form-group">
-                  <label for="title">Banner Image</label>
+                  <label for="title">@lang('public.banner_image')</label>
                   <input type="file" class="form-control" id="inputEmail3" name="image">
                   <img src="{{ $banner->img_url }}" width="150px" class="img-thumbnail" alt="">
                 </div>
                 <div class="custom-form-group">
-                  <button class="btn btn-primary" type="submit">Edit</button>
+                  <button class="btn btn-primary" type="submit">@lang('public.edit')</button>
                 </div>
               </form>
             </div>

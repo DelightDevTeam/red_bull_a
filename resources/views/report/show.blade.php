@@ -41,11 +41,11 @@
       <div class="card-header pb-0">
         <div class="d-lg-flex">
           <div>
-            <h5 class="mb-0">Win/lose Report</h5>
+            <h5 class="mb-0">@lang('public.win_lose_report')</h5>
           </div>
           <div class="ms-auto my-auto mt-lg-0 mt-4">
             <div class="ms-auto my-auto">
-              <button class="btn btn-outline-primary btn-sm export mb-0 mt-sm-0 mt-1" data-type="csv" type="button" name="button">Export</button>
+              <button class="btn btn-outline-primary btn-sm export mb-0 mt-sm-0 mt-1" data-type="csv" type="button" name="button">@lang('public.export')</button>
             </div>
           </div>
 
@@ -73,9 +73,9 @@
               </div>
             </div>
             <div class="col-md-3">
-              <button class="btn btn-sm btn-primary" id="search">Search</button>
+              <button class="btn btn-sm btn-primary" id="search">@lang('public.search')</button>
             </div>
-            
+
         </form>
       </div>
     </div>
@@ -83,20 +83,20 @@
       <table class="table table-flush" id="users-search">
         <thead class="thead-light bg-gradient-info">
           <tr>
-            <th rowspan="2" class="text-white">PlayerId</th>
-            <th rowspan="2" class="text-white">Total Valid Bet</th>
-            <th rowspan="2" class="text-white">Total Bet</th>
-            <th rowspan="2" class="text-white">Total Payout</th>
-            <th colspan="3" class="text-white">Member W/L </th>
-            <th colspan="2" class="text-white">Agent W/L </th>
-            <th rowspan="2" class="text-white">Action</th>
+            <th rowspan="2" class="text-white">@lang('public.player_id')</th>
+            <th rowspan="2" class="text-white">@lang('public.total_valid_bet')</th>
+            <th rowspan="2" class="text-white">@lang('public.total_bet')</th>
+            <th rowspan="2" class="text-white">@lang('public.total_payout')</th>
+            <th colspan="3" class="text-white">@lang('public.member_win_lose') </th>
+            <th colspan="2" class="text-white">@lang('public.agent_win_lose') </th>
+            <th rowspan="2" class="text-white">@lang('public.action')</th>
           </tr>
           <tr>
-                <th>Win/L</th>
-                <th>Comm</th>
-                <th>Total</th>
-                <th>Win/L</th>
-                <th>Total</th>
+                <th>@lang('public.win_lose')</th>
+                <th>@lang('public.commission')</th>
+                <th>@lang('public.total')</th>
+                <th>@lang('public.win_lose')</th>
+                <th>@lang('public.total')</th>
             </tr>
         </thead>
         <tbody>
@@ -120,7 +120,7 @@
             <td class="text-sm text-success font-weight-bold">{{$rep->commission_amount+ $result}}</td>
             @else
             <td class="text-sm text-danger font-weight-bold">{{$rep->commission_amount + $result}}</td>
-            @endif          
+            @endif
             <td class="text-sm font-weight-bold">{{$agentPercent}}</td>
             <td class="text-sm font-weight-bold">{{$agentPercent}}</td>
             <td><a href="{{route('admin.report.detail',$rep->user_id)}}" class="btn btn-sm btn-info">Detail</a></td>

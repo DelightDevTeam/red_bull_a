@@ -16,24 +16,27 @@
 @section('content')
 <div class="row mt-4">
   <div class="col-12">
+    <div class="d-flex justify-content-between">
+        <a class="btn btn-icon btn-2 btn-primary" href="{{ route('admin.agent.index') }}">
+         <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i> @lang('public.back')</span>
+        </a>
+       </div>
     <div class="card">
       <!-- Card header -->
       <div class="card-header pb-0">
         <div class="d-lg-flex">
           <div>
-            <h5 class="mb-0">Last login</h5>
-
+            <h5 class="mb-0">@lang('public.last_login')</h5>
           </div>
-          
         </div>
       </div>
       <div class="table-responsive">
         <table class="table table-flush" id="users-search">
           <thead class="thead-light">
             <th>#</th>
-            <th>User Id</th>
-            <th>IP Address</th>
-            <th>Login Time</th>
+            <th>@lang('public.user_id')</th>
+            <th>@lang('public.ip_address')</th>
+            <th>@lang('public.login_time')</th>
           </thead>
           <tbody>
             @if(isset($logs))

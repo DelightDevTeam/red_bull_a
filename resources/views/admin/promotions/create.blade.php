@@ -63,8 +63,8 @@
 <div class="row">
   <div class="col-12">
     <div class="container mb-3">
-      <a class="btn btn-icon btn-2 btn-primary float-end me-5" href="{{ route('admin.banners.index') }}">
-        <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>Back</span>
+      <a class="btn btn-icon btn-2 btn-primary float-end me-5" href="{{ route('admin.promotions.index') }}">
+        <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>@lang('public.back')</span>
       </a>
     </div>
     <div class="container my-auto mt-5">
@@ -73,35 +73,35 @@
           <div class="card z-index-0 fadeIn3 fadeInBottom">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
               <div class="bg-gradient-primary shadow-primary border-radius-lg py-2 pe-1">
-                <h4 class="text-white font-weight-bolder text-center mb-2">New Promotion Create</h4>
+                <h4 class="text-white font-weight-bolder text-center mb-2">@lang('public.new_promotion_create')</h4>
               </div>
             </div>
             <div class="card-body">
               <form role="form" class="text-start" action="{{ route('admin.promotions.store') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
-                  <label for="inputEmail3" class="form-label text-dark">Promotion Image</label>
+                  <label for="inputEmail3" class="form-label text-dark">@lang('public.promotion_image')</label>
                   <input type="file" class="form-control border border-1 border-secondary ps-2" id="inputEmail3" name="image">
                   @error('image')
                   <span class="text-danger d-block">*{{ $message }}</span>
                   @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="title" class="form-label text-dark">Title</label>
+                    <label for="title" class="form-label text-dark">@lang('public.title')</label>
                     <input type="text" class="form-control border border-1 border-secondary ps-2" id="title" name="title" placeholder="Enter Title">
                     @error('title')
                     <span class="text-danger d-block">*{{ $message }}</span>
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="desc" class="form-label text-dark">Description</label>
+                    <label for="desc" class="form-label text-dark">@lang('public.description')</label>
                     <textarea name="description" class="form-control border border-1 border-secondary ps-2" id="desc" cols="30" rows="10" placeholder="Enter Descriptiton"></textarea>
                     @error('description')
                     <span class="text-danger d-block">*{{ $message }}</span>
                     @enderror
                 </div>
                 <div class="mb-3">
-                  <button class="btn btn-primary" type="submit">Create</button>
+                  <button class="btn btn-primary" type="submit">@lang('public.create')</button>
                 </div>
               </form>
             </div>

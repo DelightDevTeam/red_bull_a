@@ -65,7 +65,7 @@
    <div class="d-flex justify-content-between">
     <h4>User Detail</h4>
     <a class="btn btn-icon btn-2 btn-primary" href="{{ route('admin.player.index') }}">
-     <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>Back</span>
+     <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>@lang('public.back')</span>
     </a>
    </div>
    <div class="card">
@@ -77,7 +77,7 @@
         <td>{!! $user_detail->id !!}</td>
        </tr>
        <tr>
-        <th>User Name</th>
+        <th>@lang('public.name')</th>
         <td>{!! $user_detail->name !!}</td>
        </tr>
        <tr>
@@ -85,11 +85,11 @@
         <td>{!! $user_detail->email !!}</td>
        </tr>
        <tr>
-        <th>Create Date</th>
+        <th>@lang('public.created_at')</th>
         <td>{!! $user_detail->created_at !!}</td>
        </tr>
        <tr>
-        <th>Update Date</th>
+        <th>@lang('public.updated_at')</th>
         <td>{!! $user_detail->updated_at !!}</td>
        </tr>
       </tbody>

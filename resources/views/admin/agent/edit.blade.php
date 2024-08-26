@@ -66,13 +66,13 @@
         <div class="card-header pb-0">
           <div class="d-lg-flex">
             <div>
-              <h5 class="mb-0">Edit Agent</h5>
+              <h5 class="mb-0">@lang('public.edit_agent')</h5>
 
             </div>
             <div class="ms-auto my-auto mt-lg-0 mt-4">
               <div class="ms-auto my-auto">
                 <a class="btn btn-icon btn-2 btn-primary" href="{{ route('admin.agent.index') }}">
-                  <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>Back</span>
+                  <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>@lang('public.back')</span>
                 </a>
               </div>
             </div>
@@ -83,21 +83,21 @@
             @csrf
             @method('PUT')
             <div class="custom-form-group">
-              <label for="title">Agent Id <span class="text-danger">*</span></label>
+              <label for="title">@lang('public.agent_id')<span class="text-danger">*</span></label>
               <input type="text"  name="user_name" class="form-control" value="{{$agent->user_name}}" readonly>
               @error('name')
               <span class="text-danger d-block">*{{ $message }}</span>
               @enderror
             </div>
             <div class="custom-form-group">
-              <label for="title">Agent Name <span class="text-danger">*</span></label>
+              <label for="title">@lang('public.agent_name')<span class="text-danger">*</span></label>
               <input type="text"  name="name" class="form-control" value="{{$agent->name}}">
               @error('player_name')
               <span class="text-danger d-block">*{{ $message }}</span>
               @enderror
             </div>
             <div class="custom-form-group">
-              <label for="title">Phone No</label>
+              <label for="title">@lang('public.phone_number')</label>
               <input type="text"  name="phone" class="form-control" value="{{$agent->phone}}">
               @error('phone')
               <span class="text-danger d-block">*{{ $message }}</span>
@@ -111,14 +111,14 @@
                   @enderror
               </div>
               <div class="custom-form-group">
-                  <label for="title">Agent Site Logo Image</label>
+                  <label for="title">@lang('public.agent_site_logo_image')</label>
                   <input type="file" class="form-control" id="" name="agent_logo">
                   @if($agent->agent_logo)
                       <img src="{{asset('assets/img/sitelogo/'. $agent->agent_logo)}}" alt="" width="100px">
                   @endif
               </div>
             <div class="custom-form-group">
-              <label for="title">Payment Type<span class="text-danger">*</span></label>
+              <label for="title">@lang('public.payment_type')<span class="text-danger">*</span></label>
                 <select name="payment_type_id" id="">
               @foreach($paymentTypes as $paymentType)
                     <option value="{{$paymentType->id}}" {{$paymentType->id == $agent->payment_type_id ? 'selected': ''}}>{{$paymentType->name}}</option>
@@ -129,28 +129,28 @@
               @enderror
             </div>
             <div class="custom-form-group">
-               <label for="title">Account Name</label>
+               <label for="title">@lang('public.account_name')</label>
                <input type="text"  name="account_name" class="form-control" value="{{$agent->account_name}}">
                @error('account_name')
                <span class="text-danger d-block">*{{ $message }}</span>
                @enderror
             </div>
             <div class="custom-form-group">
-               <label for="title">Account Number</label>
+               <label for="title">@lang('public.account_number')</label>
                <input type="text"  name="account_number" class="form-control" value="{{$agent->account_number}}">
                @error('account_number')
                <span class="text-danger d-block">*{{ $message }}</span>
                @enderror
             </div>
             <div class="custom-form-group">
-              <label for="title">Commission</label>
+              <label for="title">@lang('public.commission')</label>
               <input type="number"  name="commission" class="form-control" value="{{$agent->commission}}" >
               @error('commission')
               <span class="text-danger d-block">*{{ $message }}</span>
               @enderror
             </div>
             <div class="custom-form-group">
-              <button type="submit" class="btn btn-primary" type="button">Update</button>
+              <button type="submit" class="btn btn-primary" type="button">@lang('public.update')</button>
             </div>
           </form>
         </div>

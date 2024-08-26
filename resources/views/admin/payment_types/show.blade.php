@@ -63,9 +63,9 @@
   <div class="col-10">
     <div class="container mt-0">
       <div class="d-flex justify-content-between">
-        <h4>Payment's Detail</h4>
+        <h4>@lang('public.payment_detail')</h4>
         <a class="btn btn-icon btn-2 btn-primary" href="{{ route('admin.payments.index') }}">
-          <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>Back</span>
+          <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>@lang('public.back')</span>
         </a>
       </div>
       <div class="card">
@@ -77,25 +77,25 @@
                 <td>{!! $payment->id !!}</td>
               </tr>
               <tr>
-                <td class="text-right">Payment Method</td>
+                <td class="text-right">@lang('public.payment_method')</td>
                 <td>
                   {{ $payment->payment_method }}
                 </td>
               </tr>
               <tr>
-                <td class="text-right">Payment No</td>
+                <td class="text-right">@lang('public.payment_number')</td>
                 <td>
                   {{ $payment->phone }}
                 </td>
                 <tr>
-                  <td class="text-right">Receiver Name</td>
+                  <td class="text-right">@lang('public.receiver_name')</td>
                   <td>
                     {{ $payment->receiver_name }}
                   </td>
                 </tr>
               </tr>
               <tr>
-                <td>Create Date</td>
+                <td>@lang('public.created_at')</td>
                 <td>{!! $payment->created_at->format('F j, Y') !!}</td>
               </tr>
             </tbody>

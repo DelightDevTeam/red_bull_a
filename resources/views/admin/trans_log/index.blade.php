@@ -21,7 +21,7 @@
    <div class="card-header pb-0">
     <div class="d-lg-flex">
      <div>
-      <h5 class="mb-0">Transfer Log</h5>
+      <h5 class="mb-0">@lang('public.transfer_log')</h5>
 
      </div>
      <div class="ms-auto my-auto mt-lg-0 mt-4">
@@ -36,10 +36,10 @@
      <thead class="thead-light">
 
         <tr>
-            <th>Date</th>
-            <th>To User</th>
-            <th>Amount</th>
-            <th>Type</th>
+            <th>@lang('public.date')</th>
+            <th>@lang('public.to_user')</th>
+            <th>@lang('public.amount')</th>
+            <th>@lang('public.type')</th>
         </tr>
     </thead>
     <tbody>
@@ -54,9 +54,9 @@
                 </td>
                 <td>
                     @if($log->type == 'withdraw')
-                        <p class="text-danger">Withdraw</p>
+                        <p class="text-danger">@lang('public.withdraw')</p>
                     @else
-                        <p class="text-success">Deposit</p>
+                        <p class="text-success">@lang('public.deposit')</p>
                     @endif
                 </td>
             </tr>

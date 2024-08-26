@@ -66,13 +66,13 @@
         <div class="card-header pb-0">
           <div class="d-lg-flex">
             <div>
-              <h5 class="mb-0">Change Password</h5>
+              <h5 class="mb-0">@lang('public.change_password')</h5>
 
             </div>
             <div class="ms-auto my-auto mt-lg-0 mt-4">
               <div class="ms-auto my-auto">
                 <a class="btn btn-icon btn-2 btn-primary" href="{{ route('admin.agent.index') }}">
-                  <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>Back</span>
+                  <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>@lang('public.back')</span>
                 </a>
               </div>
             </div>
@@ -82,19 +82,19 @@
           <form role="form" method="POST" class="text-start" action="{{ route('admin.agent.makeChangePassword',$agent->id) }}">
             @csrf
             <div class="custom-form-group">
-              <label for="title">New Password <span class="text-danger">*</span></label>
+              <label for="title">@lang('public.new_password') <span class="text-danger">*</span></label>
               <input type="text"  name="password" class="form-control">
               @error('password')
               <span class="text-danger d-block">*{{ $message }}</span>
               @enderror
             </div>
             <div class="custom-form-group">
-              <label for="title">Confirm Password <span class="text-danger">*</span></label>
+              <label for="title">@lang('public.confirm_new_password') <span class="text-danger">*</span></label>
               <input type="text"  name="password_confirmation" class="form-control" >
             </div>
 
             <div class="custom-form-group">
-              <button type="submit" class="btn btn-primary" type="button">Confirm</button>
+              <button type="submit" class="btn btn-primary" type="button">@lang('public.confirm')</button>
             </div>
           </form>
         </div>
