@@ -83,6 +83,14 @@
         <span class="sidenav-normal  ms-2  ps-1"> @lang('public.transfer_log') </span>
       </a>
     </li>
+      @can('bank')
+          <li class="nav-item">
+              <a class="nav-link text-white " href="{{ route('admin.bank.index')}}">
+                  <span class="sidenav-mini-icon"> <i class="fas fa-right-left"></i> </span>
+                  <span class="sidenav-normal  ms-2  ps-1">Bank Account</span>
+              </a>
+          </li>
+      @endcan
     @can('deposit')
     <li class="nav-item">
       <a class="nav-link text-white " href="{{ route('admin.agent.deposit')}}">

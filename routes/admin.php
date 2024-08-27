@@ -32,9 +32,9 @@ Route::group([
     'middleware' => ['auth', 'checkBanned']
 ], function () {
 
-    // localization 
+    // localization
     Route::get('locale/{langs}', [LocalizationController::class, 'setLang']);
-    
+
     Route::post('balance-up', [HomeController::class, 'balanceUp'])->name('balanceUp');
     Route::get('logs/{id}', [HomeController::class, 'logs'])
         ->name('logs');
@@ -74,6 +74,7 @@ Route::group([
     Route::resource('banners', BannerController::class);
     Route::resource('adsbanners', BannerAdsController::class);
     Route::resource('text', BannerTextController::class);
+    Route::resource('bank', \App\Http\Controllers\Admin\BankController::class);
     Route::resource('/promotions', PromotionController::class);
     Route::resource('paymentTypes', PaymentTypeController::class);
     Route::get('gametypes', [GameTypeProductController::class, 'index'])->name('gametypes.index');

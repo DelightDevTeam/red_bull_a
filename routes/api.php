@@ -48,6 +48,7 @@ Route::get('gameType', [GameController::class, 'gameType']);
 //Route::get('gamelist/{product_id}/{game_type_id}', [GameController::class, 'gameList']);
 Route::get('hotgamelist', [GameController::class, 'HotgameList']);
 Route::get('payment-type', [PaymentTypeController::class, 'get']);
+Route::get('agent-payment-type', [PaymentTypeController::class, 'getAgentPayment']);
 Route::post('Seamless/PullReport', [LaunchGameController::class, 'pullReport']);
 
 Route::get('/test', TestController::class);
