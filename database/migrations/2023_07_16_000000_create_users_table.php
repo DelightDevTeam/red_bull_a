@@ -25,13 +25,9 @@ return new class extends Migration
             $table->integer('status')->default(1);
             $table->integer('is_changed_password')->default(1);
             $table->unsignedBigInteger('agent_id')->nullable();
-            $table->unsignedBigInteger('payment_type_id');
             $table->string('referral_code')->unique()->nullable();
             $table->string('agent_logo', 2000)->nullable();
-            $table->string('account_name');
-            $table->string('account_number');
             $table->string('line_id')->nullable();
-            //$table->string('commission')->nullable();
              $table->decimal('commission', 5, 2)->default(0.00)->comment('Commission rate as a percentage');
             $table->rememberToken();
             $table->timestamps();

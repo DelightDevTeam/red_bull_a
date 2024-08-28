@@ -43,9 +43,6 @@ class User extends Authenticatable implements Wallet
         'is_changed_password',
         'referral_code',
         'agent_logo',
-        'payment_type_id',
-        'account_number',
-        'account_name',
         'line_id',
         'commission'
     ];
