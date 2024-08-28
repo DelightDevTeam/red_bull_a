@@ -29,7 +29,6 @@ class AuthController extends Controller
     {
         $credentials = $request->only('phone', 'password');
 
-        $user = User::where('phone', $request->phone)->first();
 
         if (!Auth::attempt($credentials)) {
             return $this->error('', 'Credentials do not match!', 401);
@@ -152,7 +151,7 @@ class AuthController extends Controller
         return 'SB'.$randomNumber;
     }
 
-    private function isExistingUserForAgent($phone, $agent_id): bool
+    private function isExistingUserForAgent($phone, $agent_id)
     {
         return User::where('phone', $phone)->where('agent_id', $agent_id)->first();
     }
