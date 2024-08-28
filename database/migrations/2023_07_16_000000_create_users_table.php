@@ -31,7 +31,6 @@ return new class extends Migration
              $table->decimal('commission', 5, 2)->default(0.00)->comment('Commission rate as a percentage');
             $table->rememberToken();
             $table->timestamps();
-            $table->foreign('payment_type_id')->references('id')->on('payment_types')->onDelete('cascade');
             $table->foreign('agent_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
