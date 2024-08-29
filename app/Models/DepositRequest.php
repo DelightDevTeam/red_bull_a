@@ -23,6 +23,7 @@ class DepositRequest extends Model
     {
         return $this->belongsTo(User::class,'agent_id');
     }
+
     public function bank()
     {
         return $this->belongsTo(Bank::class,'agent_payment_type_id');

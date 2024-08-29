@@ -16,7 +16,7 @@ class DepositLogResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'payment_type' => $this->paymentType->name,
+            'payment_type' => $this->bank->paymentType->name,
             'refrence_no' => $this->refrence_no,
             'amount' => $this->amount,
             'status' => $this->status === 0 ? 'Pending' : ($this->status === 1 ? 'Success' : 'Reject'),  // Converts the 'status' property to a human-readable string
