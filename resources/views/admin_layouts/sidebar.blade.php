@@ -32,7 +32,7 @@
       </a>
     </li>
     @endcan
-    @can('agent_access')
+    @can('player_index')
     <li class="nav-item">
       <a class="nav-link text-white " href="{{ route('admin.player.index')}}">
         <span class="sidenav-mini-icon"> <i class="fa-solid fa-user"></i> </span>
