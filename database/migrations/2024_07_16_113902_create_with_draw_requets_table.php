@@ -16,6 +16,9 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('agent_id');
             $table->unsignedBigInteger('amount');
+            $table->unsignedBigInteger('payment_type_id');
+            $table->string('account_name');
+            $table->string('account_no');
             $table->tinyInteger('status')->default(0);
             $table->timestamps();
 
