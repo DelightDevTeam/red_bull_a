@@ -6,9 +6,9 @@
       <a class="nav-link text-white " href="{{ route('home') }}" style="font-szie:large;">
         <span class="sidenav-mini-icon"> <i class="material-icons-round opacity-10">dashboard</i> </span>
         @if(Auth::user()->hasRole('Admin'))
-        <span class="sidenav-normal ms-2 ps-1">Admin Dashboard</span>
+        <span class="sidenav-normal ms-2 ps-1">@lang('public.admin_dashboard')</span>
         @elseif(Auth::user()->hasRole('Agent'))
-        <span class="sidenav-normal ms-2 ps-1">Agent Dashboard</span>
+        <span class="sidenav-normal ms-2 ps-1">@lang('public.agent_dashboard')</span>
         @endif
       </a>
     </li>
