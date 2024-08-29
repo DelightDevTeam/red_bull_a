@@ -168,7 +168,7 @@
   <div class="row">
     <div class="col-md-12">
       <div class="input-group input-group-outline is-valid my-3">
-        <button type="submit" class="btn btn-primary">@lang('public.back')confirm</button>
+        <button type="submit" class="btn btn-primary">@lang('public.back')</button>
       </div>
     </div>
   </div>

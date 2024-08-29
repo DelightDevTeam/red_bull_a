@@ -17,9 +17,9 @@
 <div class="row mt-4">
   <div class="col-12">
     <div class="d-flex justify-content-between">
-        <a class="btn btn-icon btn-2 btn-primary" href="{{ route('admin.agent.index') }}">
+        {{-- <a class="btn btn-icon btn-2 btn-primary" href="{{ route('admin.agent.index') }}">
          <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i> @lang('public.back')</span>
-        </a>
+        </a> --}}
        </div>
     <div class="card">
       <!-- Card header -->
