@@ -22,7 +22,8 @@ class DepositRequestController extends Controller
                 'agent_payment_type_id' => $request->agent_payment_type_id,
                 'user_id' => $player->id,
                 'agent_id' => $player->agent_id,
-                'amount' => $request->amount
+                'amount' => $request->amount,
+                'refrence_no' => $request->refrence_no
             ]);
 
             return $this->success($deposit, 'Deposit Request Success');

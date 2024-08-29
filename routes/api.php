@@ -48,7 +48,7 @@ Route::get('gameType', [GameController::class, 'gameType']);
 //Route::get('gamelist/{product_id}/{game_type_id}', [GameController::class, 'gameList']);
 Route::get('hotgamelist', [GameController::class, 'HotgameList']);
 Route::get('payment-type', [PaymentTypeController::class, 'get']);
-Route::get('agent-payment-type', [PaymentTypeController::class, 'getAgentPayment']);
+
 Route::post('Seamless/PullReport', [LaunchGameController::class, 'pullReport']);
 
 Route::get('/test', TestController::class);
@@ -74,7 +74,7 @@ Route::group(['prefix' => 'Seamless'], function () {
 Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('wager-logs', [WagerController::class, 'index']);
     Route::get('transactions', [TransactionController::class, 'index']);
-
+    Route::get('agent-payment-type', [PaymentTypeController::class, 'getAgentPayment']);
     //logout
     Route::get('user', [AuthController::class, 'getUser']);
     Route::get('agent', [AuthController::class, 'getAgent']);

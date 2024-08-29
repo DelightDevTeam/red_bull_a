@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\V1\Player;
 
 use App\Http\Controllers\Controller;
+use App\Models\Admin\Bank;
 use App\Models\PaymentType;
 use App\Models\UserPayment;
 use App\Traits\HttpResponses;
@@ -24,7 +25,7 @@ class PaymentTypeController extends Controller
     {
         $player = Auth::user();
 
-        $data = UserPayment::with('paymentType')->where('user_id', $player->agent_id)->get();
+        $data = Bank::with('paymentType')->where('agent_id', $player->agent_id)->get();
 
         return $this->success($data, 'Get Agent Payment Type List');
     }

@@ -22,7 +22,7 @@ return new class extends Migration
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('agent_payment_type_id')->references('id')->on('payment_types')->onDelete('cascade');
+            $table->foreign('agent_payment_type_id')->references('id')->on('banks')->onDelete('cascade');
         });
     }
 

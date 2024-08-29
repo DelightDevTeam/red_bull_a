@@ -6,11 +6,9 @@
       <a class="nav-link text-white " href="{{ route('home') }}" style="font-szie:large;">
         <span class="sidenav-mini-icon"> <i class="material-icons-round opacity-10">dashboard</i> </span>
         @if(Auth::user()->hasRole('Admin'))
-        <span class="sidenav-normal ms-2 ps-1">@lang('public.admin_dashboard')</span>
+        <span class="sidenav-normal ms-2 ps-1">Admin Dashboard</span>
         @elseif(Auth::user()->hasRole('Agent'))
-        <span class="sidenav-normal ms-2 ps-1">@lang('public.agent_dashboard')</span>
-        @elseif(Auth::user()->hasRole('Player'))
-        <span class="sidenav-normal ms-2 ps-1">Player Dashboard</span>
+        <span class="sidenav-normal ms-2 ps-1">Agent Dashboard</span>
         @endif
       </a>
     </li>
@@ -34,7 +32,7 @@
       </a>
     </li>
     @endcan
-    @can('player_index')
+    @can('agent_access')
     <li class="nav-item">
       <a class="nav-link text-white " href="{{ route('admin.player.index')}}">
         <span class="sidenav-mini-icon"> <i class="fa-solid fa-user"></i> </span>
