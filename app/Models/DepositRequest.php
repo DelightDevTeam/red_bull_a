@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Admin\Bank;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -22,9 +23,9 @@ class DepositRequest extends Model
     {
         return $this->belongsTo(User::class,'agent_id');
     }
-    public function paymentType()
+    public function bank()
     {
-        return $this->belongsTo(PaymentType::class,'agent_payment_type_id');
+        return $this->belongsTo(Bank::class,'agent_payment_type_id');
     }
 
 }

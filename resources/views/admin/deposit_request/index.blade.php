@@ -47,9 +47,9 @@
             <span class="d-block">{{ $deposit->user->name }}</span>
           </td>
           <td>{{ number_format($deposit->amount) }}</td>
-          <td>{{ $deposit->paymentType->name }}</td>
-          <td>{{$deposit->agent->account_name}}</td>
-          <td>{{$deposit->agent->account_number}}</td>
+          <td>{{ $deposit->bank->paymentType->name }}</td>
+          <td>{{$deposit->bank->account_name}}</td>
+          <td>{{$deposit->bank->account_number}}</td>
           <td>
             @if ($deposit->status == 0)
                 <span class="badge text-bg-warning text-white mb-2">Pending</span>
