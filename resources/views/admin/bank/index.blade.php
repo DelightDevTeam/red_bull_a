@@ -22,12 +22,12 @@
                 <div class="card-header pb-0">
                     <div class="d-lg-flex">
                         <div>
-                            <h5 class="mb-0">Bank Account List</h5>
+                            <h5 class="mb-0">@lang('public.bank_account_list')</h5>
 
                         </div>
                         <div class="ms-auto my-auto mt-lg-0 mt-4">
                             <div class="ms-auto my-auto">
-                                <a href="{{ route('admin.bank.create') }}" class="btn bg-gradient-primary btn-sm mb-0">+&nbsp; New Bank Account</a>
+                                <a href="{{ route('admin.bank.create') }}" class="btn bg-gradient-primary btn-sm mb-0">+&nbsp;@lang('public.new_bank_account')</a>
                             </div>
                         </div>
                     </div>
@@ -37,10 +37,10 @@
                         <thead class="thead-light">
                         <tr>
                             <th>#</th>
-                            <th>Account Name</th>
-                            <th>Account Number</th>
-                            <th>Payment Type</th>
-                            <th>Actions</th>
+                            <th>@lang('public.bank_account_name')</th>
+                            <th>@lang('public.bank_account_number')</th>
+                            <th>@lang('public.payment_type')</th>
+                            <th>@lang('public.action')</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -56,7 +56,7 @@
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="transparent-btn" data-bs-toggle="tooltip" data-bs-original-title="Delete Bank">
-                                            <i class="material-icons text-secondary position-relative text-lg">delete</i>
+                                            <i class="material-icons text-secondary position-relative text-lg text-danger">delete</i>
                                         </button>
                                     </form>
                                 </td>

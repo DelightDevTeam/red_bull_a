@@ -90,13 +90,13 @@
                     <div class="card-header pb-0">
                         <div class="d-lg-flex">
                             <div>
-                                <h5 class="mb-0">Create New Bank</h5>
+                                <h5 class="mb-0">@lang('public.new_bank_create')</h5>
 
                             </div>
                             <div class="ms-auto my-auto mt-lg-0 mt-4">
                                 <div class="ms-auto my-auto">
                                     <a class="btn btn-icon btn-2 btn-primary" href="{{ route('admin.bank.index') }}">
-                                        <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>Back</span>
+                                        <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>@lang('public.back')</span>
                                     </a>
                                 </div>
                             </div>
@@ -106,7 +106,7 @@
                         <form role="form" method="POST" class="text-start" action="{{ route('admin.bank.store') }}">
                             @csrf
                             <div class="custom-form-group">
-                                <label for="title">Payment Type <span class="text-danger">*</span></label>
+                                <label for="title">@lang('public.payment_type') <span class="text-danger">*</span></label>
                                 <select name="payment_type_id" id="">
                                     <option value="">Select Payment Type</option>
                                     @foreach($paymentTypes as $paymentType)
@@ -118,23 +118,23 @@
                                 @enderror
                             </div>
                             <div class="custom-form-group">
-                                <label for="title">Account Name <span class="text-danger">*</span></label>
+                                <label for="title">@lang('public.bank_account_name') <span class="text-danger">*</span></label>
                                 <input type="text"  name="account_name" class="form-control" value="{{old('account_name')}}" placeholder="Enter Bank Account Name">
                                 @error('account_name')
                                 <span class="text-danger d-block">*{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="custom-form-group">
-                                <label for="title">Account Number <span class="text-danger">*</span></label>
+                                <label for="title">@lang('public.bank_account_number')<span class="text-danger">*</span></label>
                                 <input type="text"  name="account_number" class="form-control" value="{{old('account_number')}}" placeholder="Enter Bank Account Number">
                                 @error('account_number')
                                 <span class="text-danger d-block">*{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="custom-form-group">
-                                <button class="btn btn-info" type="button" id="resetFormButton">Cancel</button>
+                                <button class="btn btn-info" type="button" id="resetFormButton">@lang('public.cancel')</button>
 
-                                <button type="submit" class="btn btn-primary" type="button">Submit</button>
+                                <button type="submit" class="btn btn-primary" type="button">@lang('public.submit')</button>
                             </div>
                         </form>
                     </div>

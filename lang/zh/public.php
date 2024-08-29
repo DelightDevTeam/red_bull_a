@@ -181,7 +181,12 @@ return [
      'payment_number'  =>  '支付号码',
      'receiver_name'    =>  '收款人名称',
      'edit_payment'    =>   '编辑支付',
-
-
-
+     'bank_account_list'   =>  '银行账户列表',
+     'new_bank_account'    =>  '新银行账户',
+     'agent_detail_report_for' =>  '代理详细报告 ',
+     'wager_id' =>  '投注编号 ',
+     'jack_pot_amount' =>  '彩金金额',
+     'jack_pot_bet' =>  '大奖投注',
+     'agent_commission' => '代理佣金',
+     'payout_amount'   =>  '支付金额',
 ];

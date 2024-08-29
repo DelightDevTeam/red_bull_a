@@ -4,7 +4,7 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta http-equiv="X-UA-Compatible" content="ie=edge">
- <title>Lucky M</title>
+ <title>Red Bull</title>
 </head>
 <body>
  <style>
@@ -43,23 +43,23 @@
         background-color: #f1f1f1;
     }
 </style>
-<button><a href="{{ url('admin/agent-win-lose-report')}}">Back</a></button>
-<h1>Agent Detail Report for {{ $details->first()->agent_name }} ({{ \Carbon\Carbon::parse($details->first()->created_at)->format('F Y') }})</h1>
+<button><a href="{{ url('admin/agent-win-lose-report')}}">@lang('public.back')</a></button>
+<h1>@lang('public.agent_detail_report_for') {{ $details->first()->agent_name }} ({{ \Carbon\Carbon::parse($details->first()->created_at)->format('F Y') }})</h1>
 
 
 <table class="table table-bordered">
     <thead>
         <tr>
-            <th>Date</th>
-            <th>WagerID</th>
-            <th>Bet Amount</th>
-            <th>Valid Amount</th>
-            <th>Payout Amount</th>
-            <th>Commission Amount</th>
-            <th>Jack Pot Amount</th>
-            <th>JP Bet</th>
-            <th>Agent Commission</th>
-            <th>Win/Lose</th>
+            <th>@lang('public.date')</th>
+            <th>@lang('public.wager_id')</th>
+            <th>@lang('public.bet_amount')</th>
+            <th>@lang('public.valid_amount')</th>
+            <th>@lang('public.payout_amount')</th>
+            <th>@lang('public.commission_amount')</th>
+            <th>@lang('public.jack_pot_amount')</th>
+            <th>@lang('public.jack_pot_bet')</th>
+            <th>@lang('public.agent_commission')</th>
+            <th>@lang('public.payout_amount')</th>
         </tr>
     </thead>
     <tbody>

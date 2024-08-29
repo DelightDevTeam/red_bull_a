@@ -173,14 +173,18 @@ return [
   'reports'  =>  'Reports',
   'there_was_no_players' =>  'There was no Players.',
   'new_bank'    =>  'New Bank',
-  'new_bank_create' =>  'New Bank Create',
+  'new_bank_create' =>  'Create New Bank',
   'payment detail'  =>  "Payment's Detail",
   'payment_number'  =>  'Payment Number',
   'receiver_name'    =>  'Receiver Name',
   'edit_payment'    =>  'Edit Payment',
-
-
-
-
-
+  'agent_dashboard' => 'Agent Dashboards',
+  'bank_account_list'   =>  'Bank Account List',
+  'new_bank_account'    =>  'New Bank Account',
+  'agent_detail_report_for' =>  'Agent Detail Report For ',
+  'wager_id' =>  'Wager ID',
+  'jack_pot_amount' =>  'Jack Pot Amount',
+  'jack_pot_bet' =>  'Jack Pot Bet',
+  'agent_commission' => 'Agent Commission',
+  'payout_amount'   =>  'Payout Amount',
 ];
