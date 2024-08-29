@@ -63,9 +63,8 @@ class AgentController extends Controller
         );
         $agent_name = $this->generateRandomString();
         $referral_code = $this->generateReferralCode();
-        $paymentTypes = PaymentType::all();
 
-        return view('admin.agent.create', compact('agent_name', 'referral_code', 'paymentTypes'));
+        return view('admin.agent.create', compact('agent_name', 'referral_code'));
     }
 
     /**
@@ -87,24 +86,18 @@ class AgentController extends Controller
             ]);
         }
         $transfer_amount = $inputs['amount'];
-        $userPrepare = array_merge(
-            $inputs,
-            [
-                'password' => Hash::make($inputs['password']),
-                'agent_id' => Auth::id(),
-                'type' => UserType::Admin,
-            ]
-        );
-
-        if ($request->hasFile('agent_logo')) {
-        $image = $request->file('agent_logo');
-        $ext = $image->getClientOriginalExtension();
-        $filename = uniqid('logo_') . '.' . $ext;
-        $image->move(public_path('assets/img/sitelogo/'), $filename);
-        $userPrepare['agent_logo'] = $filename;
-    }
-
-        $agent = User::create($userPrepare);
+        $agent = User::create([
+            'user_name' => $request->user_name,
+            'name' => $request->name,
+            'phone' => $request->phone,
+            'amount' => $request->amount,
+            'referral_code' => $request->referral_code,
+            'wechat' => $request->wechat,
+            'commission' => $request->commission ?? 0.00,
+            'password' => Hash::make($inputs['password']),
+            'agent_id' => Auth::id(),
+            'type' => UserType::Admin
+        ]);
         $agent->roles()->sync(self::AGENT_ROLE);
 
         if (isset($inputs['amount'])) {

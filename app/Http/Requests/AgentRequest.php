@@ -28,12 +28,8 @@ class AgentRequest extends FormRequest
             'password' => 'required|min:6',
             'amount' => 'nullable|numeric',
             'referral_code' => ['required', 'string', 'unique:users,referral_code'],
-            'agent_logo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'payment_type_id' => 'required|numeric|exists:payment_types,id',
-            'account_name' => 'required|string',
-            'account_number' =>  ['required'],
-            'line_id' => 'nullable',
-            'commission' => 'nullable'
+            'wechat' => 'nullable',
+            'comission' => 'nullable','integer'
         ];
     }
 }

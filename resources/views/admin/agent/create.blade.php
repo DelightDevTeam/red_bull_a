@@ -141,42 +141,12 @@
               @enderror
             </div>
               <div class="custom-form-group">
-                  <label for="title">Line Id</label>
-                  <input type="url"  name="line_id" class="form-control" value="{{old('line_id')}}" placeholder="Enter Line Id">
-                  @error('line_id')
+                  <label for="title">Wechat</label>
+                  <input type="text"  name="wechat" class="form-control" value="{{old('wechat')}}" placeholder="Enter Wechat account">
+                  @error('wechat')
                   <span class="text-danger d-block">*{{ $message }}</span>
                   @enderror
               </div>
-            <div class="custom-form-group">
-                <label for="title">@lang('public.payment_type')<span class="text-danger">*</span></label>
-                <select name="payment_type_id" id="">
-                    <option value="">Select Payment Type</option>
-                    @foreach($paymentTypes as $paymentType)
-                        <option value="{{$paymentType->id}}">{{$paymentType->name}}</option>
-                    @endforeach
-                </select>
-                @error('payment_type_id')
-                <span class="text-danger d-block">*{{ $message }}</span>
-                @enderror
-            </div>
-            <div class="custom-form-group">
-                <label for="title">@lang('public.account_name')<span class="text-danger">*</span></label>
-                <input type="text"  name="account_name" class="form-control" value="{{old('account_name')}}" placeholder="Enter Bank Account Name">
-                @error('account_name')
-                 <span class="text-danger d-block">*{{ $message }}</span>
-                @enderror
-            </div>
-            <div class="custom-form-group">
-                <label for="title">@lang('public.account_number') <span class="text-danger">*</span></label>
-                <input type="text"  name="account_number" class="form-control" value="{{old('account_number')}}" placeholder="Enter Bank Account Number">
-                @error('account_number')
-                <span class="text-danger d-block">*{{ $message }}</span>
-                @enderror
-            </div>
-             <div class="custom-form-group">
-              <label for="title">@lang('public.agent_site_logo_image')</label>
-              <input type="file" class="form-control" id="" name="agent_logo">
-             </div>
             <div class="custom-form-group">
               <label>@lang('public.max_balance') </label>
               <span class="badge badge-sm bg-gradient-success">{{auth()->user()->balanceFloat}}</span>
@@ -197,7 +167,6 @@
             </div>
             <div class="custom-form-group">
               <button class="btn btn-info" type="button" id="resetFormButton">@lang('public.cancel')</button>
-
               <button type="submit" class="btn btn-primary" type="button">@lang('public.submit')</button>
             </div>
           </form>
