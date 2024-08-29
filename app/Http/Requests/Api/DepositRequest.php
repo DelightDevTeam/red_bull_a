@@ -24,7 +24,7 @@ class DepositRequest extends FormRequest
         return [
             'agent_payment_type_id' => ['required', 'exists:payment_types,id'],
             'amount' => ['required', 'integer', 'min:1000'],
-            'refrence_no' => ['required']
+            'refrence_no' => ['required', 'numeric' ,'digits:6']
         ];
     }
 }
