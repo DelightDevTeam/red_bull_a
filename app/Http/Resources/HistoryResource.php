@@ -19,7 +19,7 @@ class HistoryResource extends JsonResource
             'name' => $this->user->name,
             'payment_type' => $this->paymentType->name,
             'account_name' => $this->account_name,
-            'account_number' => $this->account_no,
+            'account_no' => $this->account_no,
             'amount' => $this->amount,
             'status' => $this->status === 0 ? 'Pending' : ($this->status === 1 ? 'Success' : 'Reject'),
             'datetime' => $this->created_at->format('Y-m-d H:i:s'),
