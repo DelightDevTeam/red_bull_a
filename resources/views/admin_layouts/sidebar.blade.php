@@ -115,14 +115,6 @@
       </a>
       <div class="collapse " id="dashboardsExamples">
         <ul class="nav ">
-            @can('bank')
-            <li class="nav-item ">
-                <a class="nav-link text-white " href="{{ route('admin.paymentTypes.index') }}">
-                    <span class="sidenav-mini-icon"> <i class="fa-solid fa-panorama"></i> </span>
-                    <span class="sidenav-normal  ms-2  ps-1"> @lang('public.bank_account') </span>
-                </a>
-            </li>
-            @endcan
             @can('admin_access')
           <li class="nav-item ">
             <a class="nav-link text-white " href="{{ route('admin.banners.index') }}">
